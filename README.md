@@ -19,3 +19,6 @@ This API retrieves coordinates (latitude and longitude) based on the address pas
   - Added dependency on Hypercorn, as it was missing from requirements.txt.
   - Removed Uvicorn startup command from Dockerfile; instead, specified the command to run using Hypercorn in docker-compose.yml.
   - Minor edits in main.py to adhere to PEP8 standards (added 1 blank line before the `get_geolocation` function).
+
+
+![Example](./assets/example.png)
