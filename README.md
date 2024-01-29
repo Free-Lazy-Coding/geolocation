@@ -30,4 +30,13 @@ Application written using ChatGPT 3.5.
 > I have a FastAPI application. I would like to add an endpoint that will display the real IP address of the user.
 > It's possible to obtain the IP from httpbin.
 
-![Example](./assets/example_step_2.png)
+
+### Step 3:
+
+ - **Request:** [here](https://chat.openai.com/share/8ceb265f-7eb2-454e-a48c-62cb9c59062b)
+
+> I have a FastAPI application.
+> I would like to add another endpoint for reverse geocoding (coordinates to address) using
+> the same Python package, geopy. Also, don't forget to catch possible errors.
+
+![Example](./assets/example_step_3.png)
