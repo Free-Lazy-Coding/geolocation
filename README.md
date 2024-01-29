@@ -2,8 +2,10 @@
 
 This API retrieves coordinates (latitude and longitude) based on the address passed in the command line.
 
-### Details:
-- Application written using ChatGPT 3.5.
+Application written using ChatGPT 3.5.
+
+### Step 1:
+
 - **Request:** [here](https://chat.openai.com/share/f7491fc4-a71f-4b4c-b779-ce5be96458c1)
 
 > Create a fastapi application with an endpoint that displays geolocation.
@@ -21,4 +23,11 @@ This API retrieves coordinates (latitude and longitude) based on the address pas
   - Minor edits in main.py to adhere to PEP8 standards (added 1 blank line before the `get_geolocation` function).
 
 
-![Example](./assets/example.png)
+### Step 2:
+
+ - **Request:** [here](https://chat.openai.com/share/9a01af30-71af-464b-8c72-358c5c05b810)
+
+> I have a FastAPI application. I would like to add an endpoint that will display the real IP address of the user.
+> It's possible to obtain the IP from httpbin.
+
+![Example](./assets/example_step_2.png)
