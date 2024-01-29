@@ -18,6 +18,16 @@ async def get_geolocation(q: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/reverse-geocode/")
+async def reverse_geocode(latitude: float, longitude: float):
+    try:
+        location = geolocator.reverse((latitude, longitude))
+        address = location.address
+        return {"address": address}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/user/ip")
 async def get_user_ip():
     try:
