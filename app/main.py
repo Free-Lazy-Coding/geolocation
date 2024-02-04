@@ -37,3 +37,17 @@ async def get_user_ip():
             return {"user_ip": data["origin"]}
     except Exception as e:
         raise HTTPException(status_code=500, detail="Failed to fetch user IP")
+
+
+@app.get("/user/ip/{ip_address}")
+async def get_lat_lon(ip_address: str):
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"http://ipinfo.io/{ip_address}/json")
+            data = response.json()
+            lat_lon = data.get('loc').split(',')
+            latitude = float(lat_lon[0])
+            longitude = float(lat_lon[1])
+            return {"latitude": latitude, "longitude": longitude}
+    except Exception as e:
+        return {"error": f"Error occurred: {e}"}

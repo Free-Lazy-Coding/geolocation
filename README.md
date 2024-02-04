@@ -39,4 +39,9 @@ Application written using ChatGPT 3.5.
 > I would like to add another endpoint for reverse geocoding (coordinates to address) using
 > the same Python package, geopy. Also, don't forget to catch possible errors.
 
-![Example](./assets/example_step_3.png)
+### Step 4:
+ - **Request:** [here](https://chat.openai.com/share/5c2716aa-603d-43f9-b01d-79bd1ce1e1db)
+
+> How can I find the latitude and longitude for an IP address for free using Python?
+
+![Example](./assets/example_step_4.png)
