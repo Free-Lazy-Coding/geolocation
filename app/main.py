@@ -32,9 +32,9 @@ async def reverse_geocode(latitude: float, longitude: float):
 async def get_user_ip():
     try:
         async with httpx.AsyncClient() as client:
-            response = await client.get("https://httpbin.org/ip")
+            response = await client.get("https://ipinfo.io/json")
             data = response.json()
-            return {"user_ip": data["origin"]}
+            return {"user_ip": data["ip"]}
     except Exception as e:
         raise HTTPException(status_code=500, detail="Failed to fetch user IP")
 
