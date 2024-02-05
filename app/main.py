@@ -1,5 +1,6 @@
 import httpx
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
+from geopy.distance import geodesic
 from geopy.geocoders import Nominatim
 
 app = FastAPI()
@@ -26,6 +27,33 @@ async def reverse_geocode(latitude: float, longitude: float):
         return {"address": address}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/calculate_distance")
+async def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float):
+    """
+    Calculate the distance between two sets of coordinates using geopy.
+
+    Parameters:
+    - lat1: Latitude of the first point
+    - lon1: Longitude of the first point
+    - lat2: Latitude of the second point
+    - lon2: Longitude of the second point
+
+    Returns:
+    - distance: Distance between the two points in kilometers
+    """
+
+    # Validate coordinates
+    if not (-90 <= lat1 <= 90) or not (-180 <= lon1 <= 180) or not (-90 <= lat2 <= 90) or not (-180 <= lon2 <= 180):
+        raise HTTPException(status_code=400, detail="Invalid coordinates provided")
+
+    # Calculate distance using geopy
+    coordinates_1 = (lat1, lon1)
+    coordinates_2 = (lat2, lon2)
+    distance_km = geodesic(coordinates_1, coordinates_2).kilometers
+
+    return {"distance": distance_km}
 
 
 @app.get("/user/ip")

@@ -44,4 +44,10 @@ Application written using ChatGPT 3.5.
 
 > How can I find the latitude and longitude for an IP address for free using Python?
 
-![Example](./assets/example_step_4.png)
+### Step 5:
+ - **Request:** [here](https://chat.openai.com/share/a6853930-3313-452a-9681-7c117fc62e09)
+
+> Let's create a new endpoint in my FastAPI application. It will be a search for the distance between objects.
+> I'm already using the geopy library. Maybe we can do something with it?
+
+![Example](./assets/example_step_5.png)
