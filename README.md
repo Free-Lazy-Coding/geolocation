@@ -50,4 +50,11 @@ Application written using ChatGPT 3.5.
 > Let's create a new endpoint in my FastAPI application. It will be a search for the distance between objects.
 > I'm already using the geopy library. Maybe we can do something with it?
 
-![Example](./assets/example_step_5.png)
+### Step 6:
+  - **Request:** [here](https://chat.openai.com/share/26783b7c-16de-49f3-9342-73db1fddf1df)
+
+> In our FastAPI application, we already have an endpoint to find the distance in kilometers between objects.
+> We use the geopy library. I suggest adding an endpoint to find the distance as well, 
+> but now the request arguments will be addresses instead of latitude and longitude.
+
+![Example](./assets/example_step_6.png)
