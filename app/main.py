@@ -56,6 +56,26 @@ async def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float)
     return {"distance": distance_km}
 
 
+@app.get("/distance")
+async def get_distance(address1: str, address2: str):
+    try:
+        location1 = geolocator.geocode(address1)
+        location2 = geolocator.geocode(address2)
+
+        if not location1 or not location2:
+            raise HTTPException(status_code=404, detail="One or both addresses not found")
+
+        coords1 = (location1.latitude, location1.longitude)
+        coords2 = (location2.latitude, location2.longitude)
+
+        distance_km = geodesic(coords1, coords2).kilometers
+
+        return {"distance_km": distance_km}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/user/ip")
 async def get_user_ip():
     try:
