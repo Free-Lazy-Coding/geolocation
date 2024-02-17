@@ -6,6 +6,14 @@ services:
     command: ["gunicorn", "-w", "3", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8000", "main:app"]
     ports:
       - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
   nginx:
     image: nginx:latest
     ports:

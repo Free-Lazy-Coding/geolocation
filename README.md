@@ -57,4 +57,10 @@ Application written using ChatGPT 3.5.
 > We use the geopy library. I suggest adding an endpoint to find the distance as well, 
 > but now the request arguments will be addresses instead of latitude and longitude.
 
-![Example](./assets/example_step_6.png)
+### Step 7:
+ - **Request:** [here](https://chat.openai.com/share/6850154c-ed76-4939-8718-801149e60f3c)
+
+> It was a full-fledged conversation where we updated the code, caught bugs, fixed them, 
+> and ultimately even managed to get something working.
+
+![Example](./assets/example_step_7.png)
