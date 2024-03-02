@@ -63,4 +63,33 @@ Application written using ChatGPT 3.5.
 > It was a full-fledged conversation where we updated the code, caught bugs, fixed them, 
 > and ultimately even managed to get something working.
 
-![Example](./assets/example_step_7.png)
+### Step 8:
+ - **Request:** [here](https://chat.openai.com/share/7ea50016-ed08-4995-9317-d9e2efa94157)
+ - **Extra information**: This was one of the longest conversations with ChatGPT. During the conversation,
+it replaced the already well-generated code with another. It was forgetting about the code that had already been 
+written, coming up with non-existent calls to library methods, and a couple of other things.
+> You have written a FastAPI application with several endpoints for obtaining geolocation.
+> Act as the lead Python developer: I need to optimize and refactor your application and its deployment, 
+> even if it's necessary to completely change the structure or code (for example, splitting a file into modules), 
+> so proceed without hesitation. You will explore all possible edge cases that may lead to errors (you need to think
+> of some data validation for the data that will come from users). During the process, you should focus on code 
+> cleanliness, relevance, and correct usage of various third-party libraries. Provide detailed documentation for FastAPI
+> endpoints so that it is displayed in Swagger, and don't forget to include descriptions not only for the endpoints 
+> themselves but also descriptions of the status codes that may be displayed to the user (referring to the "responses" 
+> parameter in the initialization of endpoints, for example, responses={429: {"model": YourModelName}}). 
+> Please avoid code duplication, remember DRY and KISS principles. Output the final result in well-structured files and
+> their refactored code. Describe everything in detail, don't skip anything!
+> Here's the project structure:
+```
+project_root/
+|-- app/
+| |-- main.py
+|-- Dockerfile
+|-- docker-compose.yml
+|-- nginx/
+| |-- nginx.conf
+|-- requirements.txt
+```
+> And here's the contents of the files: ...I copied the contents of all files...
+
+![Example](./assets/example_step_8.png)

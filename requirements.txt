@@ -4,3 +4,4 @@ geopy==2.4.1
 gunicorn==21.2.0
 httpx==0.26.0
 fastapi-limiter==0.1.6
+asyncer==0.0.5
