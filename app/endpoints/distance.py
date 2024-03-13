@@ -1,19 +1,20 @@
 from typing import Annotated
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+
 from app.services.distance import get_distance, calculate_distance
 from app.models import DistanceRequest, CoordinatesRequest, DistanceResponse, ErrorResponse
 from app.utils.cache import cache_response
 
 router = APIRouter()
 
-from fastapi import Depends
+
 @router.get(
     "/addresses",
     summary="Calculate distance between two addresses",
     response_model=DistanceResponse,
     responses={
-        404: {
+        503: {
             "model": ErrorResponse,
         },
     },
@@ -38,6 +39,9 @@ async def get_distance_endpoint(request: Annotated[DistanceRequest, Depends()]):
     response_model=DistanceResponse,
     responses={
         404: {
+            "model": ErrorResponse,
+        },
+        503: {
             "model": ErrorResponse,
         },
     },

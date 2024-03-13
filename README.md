@@ -92,4 +92,12 @@ project_root/
 ```
 > And here's the contents of the files: ...I copied the contents of all files...
 
+### Step 9:
+ - **Request:** [here](https://chat.openai.com/share/c2fcc1ae-a217-4e9c-a7ec-d338ae416152)
+
+> It was another full conversation where we were trying to find suitable conditions for tests,
+> encountering errors again, and fixing them. While writing the tests, we even found bugs in the API and corrected them.
+> As a result, we achieved 100% code coverage with our tests.
+
 ![Example](./assets/example_step_8.png)
+![Tests](./assets/example_step_9.png)

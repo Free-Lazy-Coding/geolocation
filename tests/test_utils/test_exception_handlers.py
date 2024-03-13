@@ -19,7 +19,7 @@ async def test_custom_exception_handler():
     request = Request(scope=scope)
 
     # Test for HTTPException
-    http_exception = HTTPException(status_code=404, detail="Not Found")
+    http_exception = HTTPException(status_code=500, detail="Check error")
     response = await custom_exception_handler(request, http_exception)
     assert response.status_code == 500
 

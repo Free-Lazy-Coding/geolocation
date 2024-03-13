@@ -16,6 +16,9 @@ router = APIRouter()
         404: {
             "model": ErrorResponse,
         },
+        503: {
+            "model": ErrorResponse,
+        },
     },
 )
 @cache_response()
@@ -38,6 +41,9 @@ async def geocode_address_endpoint(request: Annotated[GeocodeRequest, Depends()]
     response_model=ReverseGeocodeResponse,
     responses={
         404: {
+            "model": ErrorResponse,
+        },
+        503: {
             "model": ErrorResponse,
         },
     },
